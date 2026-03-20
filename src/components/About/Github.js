@@ -1,28 +1,41 @@
 import React from "react";
-import GitHubCalendar from "react-github-calendar";
-import { Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
-function Github() {
+const items = [
+  { emoji: "⚙️", text: "DevOps Automation", sub: "Docker, Kubernetes, Terraform, Ansible" },
+  { emoji: "☁️", text: "Cloud Engineering", sub: "AWS, GCP & Azure Infrastructure" },
+  { emoji: "🛠️", text: "CI/CD Pipelines", sub: "Deployment Automation & GitOps" },
+  { emoji: "🧠", text: "Backend Development", sub: "Node.js, Go & Scalable APIs" },
+  { emoji: "📊", text: "Observability & Monitoring", sub: "Prometheus, Grafana & Alerting" },
+  { emoji: "🤖", text: "Competitive Programming", sub: "Problem Solving & Algorithms" },
+];
+
+function WhatIDo() {
   return (
-    <Row
-      style={{
-        justifyContent: "center",
-        paddingBottom: "10px",
-        color: "white",
-      }}
-    >
-      <h1 className="project-heading pb-4" style={{ paddingBottom: "20px" }}>
-        Days I <strong className="purple">Code</strong>
-      </h1>
-      <GitHubCalendar
-        username="soumyajit4419"
-        blockSize={30}
-        blockMargin={10}
-        color="#c084f5"
-        fontSize={20}
-      />
-    </Row>
+    <Container fluid className="skills-section">
+      <Container>
+        <h1 className="project-heading" style={{ textAlign: "center" }}>
+          What <strong className="purple">I Do</strong>
+        </h1>
+        <p className="skills-intro">
+          As a passionate engineer, I focus on building scalable systems,
+          automating workflows, and exploring modern cloud-native technologies.
+        </p>
+
+        <div className="what-i-do-grid">
+          {items.map((item, idx) => (
+            <div key={idx} className="wid-card">
+              <span className="wid-emoji">{item.emoji}</span>
+              <div className="wid-content">
+                <div className="wid-title">{item.text}</div>
+                <div className="wid-sub">{item.sub}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Container>
   );
 }
 
-export default Github;
+export default WhatIDo;

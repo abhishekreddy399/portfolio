@@ -1,0 +1,234 @@
+.cert-section {
+    margin-top: 80px;
+    padding-bottom: 80px;
+}
+
+.cert-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.cert-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.cert-main-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif !important;
+}
+
+.cert-gradient-word {
+    background: linear-gradient(135deg, #c084fc, #e178ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cert-subsection {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.cert-type-indicator {
+    width: 25px;
+    height: 3px;
+    background: #c770f0;
+    border-radius: 4px;
+}
+
+.cert-type-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.cert-grid {
+    gap: 0;
+}
+
+.cert-col {
+    padding: 10px;
+}
+
+.cert-card {
+    background: rgba(10, 10, 10, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cert-card:hover {
+    background: rgba(15, 15, 15, 0.6);
+    border-color: rgba(199, 112, 240, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cert-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.cert-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.4;
+    max-width: 85%;
+}
+
+.cert-link-icon {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.cert-link-icon:hover {
+    color: #c770f0;
+}
+
+.cert-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.cert-provider {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+.cert-date {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.achievement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.achievement-card {
+    background: rgba(10, 10, 10, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    background: rgba(15, 15, 15, 0.6);
+    border-color: rgba(199, 112, 240, 0.3);
+    transform: translateX(5px);
+}
+
+.achievement-icon-wrapper {
+    min-width: 48px;
+    height: 48px;
+    background: rgba(199, 112, 240, 0.1);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(199, 112, 240, 0.2);
+}
+
+.achievement-icon {
+    font-size: 22px;
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-description {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.achievement-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.achievement-date {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.achievement-link {
+    color: #c770f0;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.3s ease;
+}
+
+.achievement-link:hover {
+    color: #e178ea;
+    text-decoration: underline;
+}
+
+.achieve-link-icon {
+    font-size: 0.8em;
+}
+
+@media (max-width: 767px) {
+    .cert-main-title {
+        font-size: 2.2rem;
+    }
+    
+    .cert-card {
+        padding: 20px;
+    }
+
+    .cert-card-footer {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .achievement-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .achievement-icon-wrapper {
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,131 @@
+.floating-container {
+  position: fixed;
+  bottom: 80px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+  animation: floatUpAndDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUpAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.floating-item-wrapper {
+  text-decoration: none !important;
+}
+
+.floating-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-direction: row; /* Label on left, icon on right */
+  text-decoration: none !important;
+}
+
+.floating-button {
+  width: 55px;
+  height: 55px;
+  background-color: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 26px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+}
+
+.bird-icon {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+}
+
+.floating-label {
+  background-color: #0a0a0a;
+  color: #c084fc; 
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Tooltip arrow effect (pointing right to the icon) */
+.floating-label::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 9px solid #0a0a0a;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.floating-item:hover .floating-button {
+  transform: scale(1.1);
+  border-color: #c084fc;
+  box-shadow: 0 0 20px rgba(192, 132, 252, 0.4);
+}
+
+.floating-item:hover .floating-label,
+.floating-item:active .floating-label {
+  background-color: #c084fc; /* Purple background when hovered or pressed */
+  color: #ffffff !important;   /* Force white text */
+  border-color: #c084fc;
+}
+
+.floating-item:hover .floating-label::after {
+  border-left-color: #c084fc;
+}
+
+@media (max-width: 767px) {
+  .floating-container {
+    bottom: 30px;
+    right: 20px;
+  }
+  .floating-button {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  .floating-label {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+}
+
+.floating-item:hover .floating-button {
+  transform: scale(1.1) rotate(5deg);
+  border-color: #c084fc;
+  box-shadow: 0 0 15px rgba(192, 132, 252, 0.4);
+}
+
+.floating-item:hover .floating-label {
+  transform: translateX(-5px);
+  /* background-color: #151515; */ /* Removed this to keep the purple color from the first rule */
+}
+
+@media (max-width: 600px) {
+  .floating-container {
+      bottom: 20px;
+      right: 20px;
+  }
+}
